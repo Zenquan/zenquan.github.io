@@ -1,4 +1,4 @@
-# nuxt-app
+# nuxt-tv
 
 ## Build Setup
 

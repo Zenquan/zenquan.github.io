@@ -6,24 +6,7 @@
 </template>
 <script>
 export default {
-  data () {
-    return {
-    }
-  },
-  props: {
-  },
-  methods: {
-  },
-  computed: {
-  },
-  components: {
-  },
-  created() {
-  },
-  mounted() {
-  },
-  destroyed() {
-  }
+  layout: 'logo'
 };
 </script>
 <style>
