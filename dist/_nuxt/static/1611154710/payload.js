@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/", {data:[{post:{gender:"male",_id:"5ff550a65ef30c38583d924e",name:"蔡镇泉222"}}],fetch:[],mutations:void 0});

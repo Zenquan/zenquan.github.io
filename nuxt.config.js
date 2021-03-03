@@ -1,3 +1,5 @@
+import { join } from 'path'
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   target: 'static',
@@ -27,7 +29,10 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: [
+    // '~/styles/index.css',
+    // '~/styles/index'
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -51,10 +56,16 @@ export default {
     proxy: true
   },
   proxy: {
-    '/api/emoji': {
+    '/api/splider': {
       target: 'http://localhost:4000',
       pathRewrite: {
-        '^/api/emoji' : '/'
+        '^/api/splider' : '/'
+      }
+    },
+    '/api/zhihu': {
+      target: 'http://localhost:5000',
+      pathRewrite: {
+        '^/api/zhihu' : '/'
       }
     }
   },
@@ -73,5 +84,13 @@ export default {
         }, 'vant']
       ],
     },
+    postcss: {
+      plugins: {
+        // tailwindcss: join(__dirname, 'tailwind.config.js'),
+        'postcss-pxtorem': {
+          propList: ['*', '!border*']
+        }
+      }
+    }
   }
 }
