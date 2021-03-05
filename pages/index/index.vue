@@ -57,6 +57,5 @@ export default {
 .container {
   margin: 0 auto;
   min-height: 100vh;
-  padding: 15px;
 }
 </style>

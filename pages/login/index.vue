@@ -8,25 +8,29 @@
       <van-cell-group>
         <van-field v-model="name"
           label="用户名"
-          placeholder="请输入用户名" />
+          placeholder="请输入用户名"
+          :rules="[{ nameValidator, message: '请填写用户名' }]"/>
         <van-field
           type="password"
           v-model="password"
           label="密码"
-          placeholder="密码" />
+          placeholder="密码"
+          :rules="[{ required: true, message: '请填写密码' }]"/>
       </van-cell-group>
       <van-button
         type="info"
         class="login-btn"
+        @click="onSubmit"
         >{{loginBtn}}
       </van-button>
     </div>
-    <footer class="footer" @click="register">
+    <footer class="footer" @click="loginOrRegister">
       还没有账号，点击{{registerBtn}}
     </footer>
   </div>
 </template>
 <script>
+import { login, getUsers } from '~/api/zhihu';
 export default {
   data () {
     return {
@@ -40,7 +44,20 @@ export default {
   props: {
   },
   methods: {
-    register () {
+    nameValidator () {
+      console.log('>>>', this.name);
+    },
+    async onSubmit () {
+      if (this.name && this.password) {
+        const result = await login({
+          name: this.name,
+          password: this.password
+        })
+
+        console.log('result>>>', result);
+      }
+    },
+    loginOrRegister () {
       this.isRegistered = !this.isRegistered;
       if (this.isRegistered) {
         this.loginBtn = '注册并登录'

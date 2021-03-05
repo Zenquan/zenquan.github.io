@@ -17,6 +17,7 @@ service.interceptors.request.use(
 
 service.interceptors.response.use(
   (response) => {
+    console.log('>>>', response);
     const res = response.data
     const {ret, data, msg} = res
     if (ret == '200') {

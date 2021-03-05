@@ -55,6 +55,7 @@ export default {
 </script>
 <style lang="less" scoped>
   .emoji {
+    padding: 15px;
     .emoji-img {
       margin: 5px 7px ;
     }

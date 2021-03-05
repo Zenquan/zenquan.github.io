@@ -7,3 +7,12 @@ export const getUsers = (params) =>
     method: 'get',
     params
   })
+
+  export const login= (params) => {
+    console.log('>>>', params);
+    return request({
+      url: '/api/zhihu/users/login',
+      method: 'post',
+      data: params
+    })
+  }
