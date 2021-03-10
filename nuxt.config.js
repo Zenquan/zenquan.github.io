@@ -30,8 +30,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    // '~/styles/index.css',
-    // '~/styles/index'
+    // '~/assets/css/index.less',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -40,11 +39,20 @@ export default {
     '~/plugins/vant.js'
   ],
 
+  loader:[
+    {
+        test:/\.less$/,
+        loaders:'style-loader!css-loader!less-loader'
+    }
+  ],
+
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  buildModules: [
+    '@nuxtjs/tailwindcss'
+  ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -86,9 +94,17 @@ export default {
     },
     postcss: {
       plugins: {
-        // tailwindcss: join(__dirname, 'tailwind.config.js'),
+        'postcss-import': {
+
+        },
+        tailwindcss: join(__dirname, 'tailwind.config.js'),
         'postcss-pxtorem': {
           propList: ['*', '!border*']
+        }
+      },
+      preset: {
+        autoprefixer: {
+          grid: true
         }
       }
     }

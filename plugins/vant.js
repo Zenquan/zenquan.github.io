@@ -11,7 +11,9 @@ import {
   TabbarItem,
   Field,
   CellGroup,
-  ImagePreview
+  ImagePreview,
+  Tab,
+  Tabs
 } from 'vant';
 
 Vue.use(Button);
@@ -26,3 +28,5 @@ Vue.use(TabbarItem);
 Vue.use(Field);
 Vue.use(CellGroup);
 Vue.use(ImagePreview);
+Vue.use(Tab);
+Vue.use(Tabs);

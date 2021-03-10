@@ -11,16 +11,19 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.5",
+    "@octokit/core": "^3.3.0",
     "axios": "^0.21.1",
     "core-js": "^3.8.2",
     "nuxt": "^2.14.12",
     "postcss-pxtorem": "^5.1.1",
-    "tailwindcss": "^2.0.3",
     "vant": "^2.12.4"
   },
   "devDependencies": {
     "@nuxtjs/proxy": "^2.1.0",
+    "@nuxtjs/tailwindcss": "^3.4.2",
+    "@tailwindcss/postcss7-compat": "^2.0.3",
     "@vue/test-utils": "^1.1.2",
+    "autoprefixer": "^9.8.6",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^26.6.3",
     "babel-plugin-import": "^1.13.3",
@@ -28,7 +31,9 @@
     "less": "^4.1.0",
     "less-loader": "^7.2.1",
     "path": "^0.12.7",
+    "postcss": "^7.0.35",
     "sass-loader": "10",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3",
     "vue-jest": "^3.0.4"
   }
 }

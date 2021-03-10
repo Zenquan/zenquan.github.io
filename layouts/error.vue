@@ -55,6 +55,7 @@
     margin-top: 100px;
     img {
       width: 140px;
+      margin: 0 auto;
     }
     h3 {
       margin-top: 30px;
