@@ -1,11 +1,11 @@
 {
-  "name": "nuxt-tv",
+  "name": "zenquan的空间站",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "start": "nuxt start --port 5300",
     "generate": "nuxt generate",
     "test": "jest"
   },

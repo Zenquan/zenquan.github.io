@@ -4,7 +4,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   target: 'static',
   head: {
-    title: 'nuxt-tv',
+    title: 'zenquan的空间站',
     htmlAttrs: {
       lang: 'en'
     },
