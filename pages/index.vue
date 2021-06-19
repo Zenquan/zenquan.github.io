@@ -10,8 +10,11 @@
       <img :src="avatar" alt="" class="avatar">
       <div class="link-blog-wrap">
         <fancy-btn href="//blog.joyenjoy.tech/" title="新博客"/>
-        <fancy-btn href="#" title="项目"/>
         <fancy-btn href="https://www.cnblogs.com/Jomsou/" title="博客园"/>
+        <fancy-btn href="#" title="项目"/>
+        <fancy-btn href="#" title="相册"/>
+        <fancy-btn href="#" title="导航"/>
+        <fancy-btn href="https://blog.joyenjoy.tech/about/" title="关于"/>
       </div>
     </div>
   </pbg>
@@ -49,7 +52,7 @@ export default {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
 }
 .icon-logo {

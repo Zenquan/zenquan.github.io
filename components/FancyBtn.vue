@@ -12,7 +12,7 @@
 
 <style lang="less">
 @fancy-btn-color: #fff;
-@fancy-text-font-size: 40px;
+@fancy-text-font-size: 15px;
 @fancy-border-width: 3px;
 
 .fancybtn-wrap {
