@@ -4,7 +4,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   target: 'static',
   head: {
-    title: 'zenquan的空间站',
+    title: 'Zenquan的空间站',
     htmlAttrs: {
       lang: 'en'
     },
@@ -30,7 +30,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    // '~/assets/css/index.less',
+    '~/assets/css/index.less',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins

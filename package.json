@@ -1,9 +1,9 @@
 {
-  "name": "zenquan的空间站",
+  "name": "zenquan-site",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt --port 5400",
     "build": "nuxt build",
     "start": "nuxt start --port 5300",
     "generate": "nuxt generate",

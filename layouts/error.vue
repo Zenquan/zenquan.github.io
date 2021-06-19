@@ -1,5 +1,5 @@
 <template>
-  <div class="error">
+  <div class="error f-all-center">
     <div v-if="error.statusCode === 404"
       class="error-404">
       <img :src="img404" alt="">
@@ -44,6 +44,8 @@
 </script>
 <style lang="less">
 .error {
+  width: 100%;
+  height: 100vh;
   text-align: center;
   .go-index {
     width: 90px;
@@ -52,7 +54,6 @@
     padding: 0 16px;
   }
   .error-404 {
-    margin-top: 100px;
     img {
       width: 140px;
       margin: 0 auto;
