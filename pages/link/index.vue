@@ -18,7 +18,7 @@
 import { Octokit } from "@octokit/core";
 import { Toast } from "vant";
 const octokit = new Octokit({
-  auth: "3209a83dfb7f59bbb854e11d34f4737abe87a2b5"
+  auth: ""
 });
 export default {
   data() {
