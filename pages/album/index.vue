@@ -1,14 +1,12 @@
 <template>
   <div>
-    <ProjectCard/>
+    album
   </div>
 </template>
 <script>
-import ProjectCard from '@/components/ProjectCard'
 export default {
   data () {
     return {
-      ProjectCard
     }
   },
   props: {

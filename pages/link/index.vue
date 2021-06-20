@@ -18,7 +18,7 @@
 import { Octokit } from "@octokit/core";
 import { Toast } from "vant";
 const octokit = new Octokit({
-  auth: "3209a83dfb7f59bbb854e11d34f4737abe87a2b5"
+  auth: ""
 });
 export default {
   data() {
@@ -50,35 +50,35 @@ export default {
           })
         });
 
-        if (this.issuesNumbers.length) {
-          this.issuesNumbers.forEach(async n => {
-            if (n.comments) {
-              const comments = await octokit.request(
-                "GET /repos/{owner}/{repo}/issues/{issue_number}/comments",
-                {
-                  owner: "zenquan",
-                  repo: "EasyLink",
-                  issue_number: n.number
-                }
-              );
+        // if (this.issuesNumbers.length) {
+        //   this.issuesNumbers.forEach(async n => {
+        //     if (n.comments) {
+        //       const comments = await octokit.request(
+        //         "GET /repos/{owner}/{repo}/issues/{issue_number}/comments",
+        //         {
+        //           owner: "zenquan",
+        //           repo: "EasyLink",
+        //           issue_number: n.number
+        //         }
+        //       );
 
-              if (comments.status === 200) {
-                const {data} = comments
-                this.comments.push(data)
-              } else {
-                Toast("github comments接口异常");
-              }
-              // await comments.forEach(comment => {
-              //   this.tabs.push({
-              //     title: comment.title,
-              //     body: comment.body
-              //   })
-              // })
-            }
-          });
-        } else {
-          Toast("github issues数量为0");
-        }
+        //       if (comments.status === 200) {
+        //         const {data} = comments
+        //         this.comments.push(data)
+        //       } else {
+        //         Toast("github comments接口异常");
+        //       }
+        //       // await comments.forEach(comment => {
+        //       //   this.tabs.push({
+        //       //     title: comment.title,
+        //       //     body: comment.body
+        //       //   })
+        //       // })
+        //     }
+        //   });
+        // } else {
+        //   Toast("github issues数量为0");
+        // }
       } else {
         Toast("github issues接口请求失败");
       }
