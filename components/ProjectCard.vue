@@ -45,6 +45,7 @@ export default {
   box-shadow: 6px 6px 6px -6px rgba(0, 0, 0, 0.33);
   transition: box-shadow 0.4s;
   border-radius: 10px;
+  cursor: pointer;
   &:hover,
   &:active,
   &:focus,
