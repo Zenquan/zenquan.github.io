@@ -13,7 +13,8 @@ import {
   CellGroup,
   ImagePreview,
   Tab,
-  Tabs
+  Tabs,
+  Loading
 } from 'vant';
 
 Vue.use(Button);
@@ -30,3 +31,4 @@ Vue.use(CellGroup);
 Vue.use(ImagePreview);
 Vue.use(Tab);
 Vue.use(Tabs);
+Vue.use(Loading);

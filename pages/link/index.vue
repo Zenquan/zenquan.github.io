@@ -15,11 +15,7 @@
   </div>
 </template>
 <script>
-import { Octokit } from "@octokit/core";
 import { Toast } from "vant";
-const octokit = new Octokit({
-  auth: ""
-});
 export default {
   data() {
     return {
@@ -32,7 +28,7 @@ export default {
   props: {},
   methods: {
     async fetch() {
-      const issues = await octokit.request("GET /repos/{owner}/{repo}/issues", {
+      const issues = await this.octokit.request("GET /repos/{owner}/{repo}/issues", {
         owner: "zenquan",
         repo: "EasyLink"
       });

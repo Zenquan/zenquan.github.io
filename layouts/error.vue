@@ -4,7 +4,7 @@
       class="error-404">
       <img :src="img404" alt="">
       <h3>404</h3>
-      <p>你似乎来到了没有知识存在的荒原</p>
+      <p>你似乎来到空间站不存在的荒原</p>
     </div>
     <div class="error-404"
       v-else>

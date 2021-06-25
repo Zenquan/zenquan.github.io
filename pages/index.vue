@@ -11,7 +11,7 @@
       <div class="link-blog-wrap">
         <fancy-btn href="//blog.joyenjoy.tech/" title="新博客"/>
         <fancy-btn href="https://www.cnblogs.com/Jomsou/" title="博客园"/>
-        <fancy-btn href="https://github.com/Zenquan?tab=repositories" title="项目"/>
+        <fancy-btn href="/projects" title="项目"/>
         <fancy-btn href="https://www.xiaohongshu.com/user/profile/5dd884b30000000001001d23" title="相册"/>
         <fancy-btn href="https://github.com/Zenquan/EasyLink" title="导航"/>
         <fancy-btn href="https://blog.joyenjoy.tech/about/" title="关于"/>

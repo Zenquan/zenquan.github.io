@@ -36,7 +36,8 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/axios.js',
-    '~/plugins/vant.js'
+    '~/plugins/vant.js',
+    '~/plugins/octokit.js'
   ],
 
   loader:[
