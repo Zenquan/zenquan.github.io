@@ -1,5 +1,10 @@
 # zenquan的空间站
 
+
+## TODO
+
+- [ ] 分类相册
+- [ ] 权限相册
 ## Build Setup
 
 ```bash
