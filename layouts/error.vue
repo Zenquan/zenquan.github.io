@@ -10,20 +10,16 @@
       v-else>
         <p>有错误出现</p>
     </div>
-    <Button
+    <van-button
       type="info"
       class="go-index"
       @click="goIndex">
         去往首页
-    </Button>
+    </van-button>
   </div>
 </template>
 
 <script>
-  import {
-    Button
-  } from 'vant';
-
   export default {
     props: ['error'],
     layout: 'error', // you can set a custom layout for the error page
@@ -38,7 +34,6 @@
       }
     },
     components: {
-      Button
     }
   }
 </script>

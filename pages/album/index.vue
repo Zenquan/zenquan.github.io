@@ -23,7 +23,6 @@
 import 'viewerjs/dist/viewer.css'
 import Viewer from 'v-viewer'
 import Vue from 'vue'
-import { Toast } from 'vant'
 Vue.use(Viewer)
 Viewer.setDefaults({
   zIndexInline: 2017
@@ -57,7 +56,7 @@ export default {
       this.$viewer = viewer
     },
     async fetchImages () {
-      const baseUrl = `https://cdn.jsdelivr.net/gh/zenquan/diagrams@master/album/`;
+      const baseUrl = `${this.baseCDNUrl}/album/`;
       const result = await this.octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
         owner: 'zenquan',
         repo: 'diagrams',

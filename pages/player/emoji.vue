@@ -19,8 +19,9 @@
     </div>
 </template>
 <script>
-import { ImagePreview } from 'vant';
-import { searchJson } from '~/api/splider';
+import _ from 'lodash'
+import { ImagePreview } from 'vant'
+// import { searchJson } from '~/api/splider';
 export default {
   data () {
     return {
@@ -36,8 +37,22 @@ export default {
       ImagePreview([item])
     },
     async initData () {
-      this.list = await searchJson({page: this.page});
-      // console.log('list>>>', this.list);
+      // this.list = await searchJson({page: this.page});
+      const baseUrl = `${this.baseCDNUrl}/album`;
+      const data = await this.octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
+        owner: 'zenquan',
+        repo: 'diagrams',
+        path: 'album'
+      })
+
+      if (data && data.status) {
+
+      }
+      this.list = _.map(data.data, d => {
+        return `${baseUrl}/${d.name}`
+      })
+
+      console.log('list>>>', this.list);
     },
   },
   computed: {

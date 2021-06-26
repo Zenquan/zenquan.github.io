@@ -37,7 +37,8 @@ export default {
   plugins: [
     '~/plugins/axios.js',
     '~/plugins/vant.js',
-    '~/plugins/octokit.js'
+    '~/plugins/octokit.js',
+    '~/plugins/global.js',
   ],
 
   loader:[
@@ -72,7 +73,7 @@ export default {
       }
     },
     '/api/zhihu': {
-      target: 'http://localhost:5000',
+      target: 'http://zhihu.joyenjoy.tech',
       pathRewrite: {
         '^/api/zhihu' : '/'
       }

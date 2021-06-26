@@ -30,7 +30,6 @@
 </template>
 <script>
 import ProjectCard from '@/components/ProjectCard'
-import { Toast } from 'vant';
 export default {
   data () {
     return {
@@ -139,6 +138,7 @@ export default {
     height: 80vh;
     overflow-y: auto;
     margin-top: 220px;
+    padding: 0 20px;
   }
   .footer {
     height: 100px;
