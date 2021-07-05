@@ -9,15 +9,15 @@
       <van-tabbar v-model="active"
         active-color="#06f">
         <van-tabbar-item badge="3">
-          <span>资讯</span>
+          <span>首页</span>
           <template #icon="props">
             <img :src="props.active ? icon.active : icon.inactive" />
           </template>
         </van-tabbar-item>
-        <van-tabbar-item icon="search">娱乐</van-tabbar-item>
+        <van-tabbar-item icon="search">表情包</van-tabbar-item>
         <van-tabbar-item icon="setting-o"
           @click="goUserCenter"
-          >用户中心</van-tabbar-item>
+          >我的</van-tabbar-item>
       </van-tabbar>
     </footer>
   </div>
@@ -31,7 +31,7 @@ export default {
   data() {
     return {
       // 底部导航栏
-      active: 2,
+      active: 0,
       icon: {
         active: 'https://img01.yzcdn.cn/vant/user-active.png',
         inactive: 'https://img01.yzcdn.cn/vant/user-inactive.png',

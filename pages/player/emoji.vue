@@ -36,22 +36,20 @@ export default {
     imgPreview (e, item) {
       ImagePreview([item])
     },
-    async initData () {
+    async initData (page = 1) {
       // this.list = await searchJson({page: this.page});
-      const baseUrl = `${this.baseCDNUrl}/album`;
+      const baseUrl = `${this.baseCDNUrl}/emoji/${page}`;
       const data = await this.octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
         owner: 'zenquan',
         repo: 'diagrams',
-        path: 'album'
+        path: `emoji/${page}`
       })
 
       if (data && data.status) {
-
+        this.list = _.map(data.data, d => {
+          return `${baseUrl}/${d.name}`
+        })
       }
-      this.list = _.map(data.data, d => {
-        return `${baseUrl}/${d.name}`
-      })
-
       console.log('list>>>', this.list);
     },
   },
@@ -62,7 +60,7 @@ export default {
   created() {
   },
   mounted() {
-    this.initData();
+    this.initData(1);
   },
   destroyed() {
   }

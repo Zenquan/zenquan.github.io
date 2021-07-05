@@ -3,7 +3,6 @@
     <div v-if="error.statusCode === 404"
       class="error-404">
       <img :src="img404" alt="">
-      <h3>404</h3>
       <p>你似乎来到空间站不存在的荒原</p>
     </div>
     <div class="error-404"
@@ -20,12 +19,13 @@
 </template>
 
 <script>
+  import img404 from '~/assets/img/404-Error-rafiki.svg'
   export default {
     props: ['error'],
     layout: 'error', // you can set a custom layout for the error page
     data() {
       return {
-        img404: 'http://zhstatic.zhihu.com/assets/error/liukanshan_wire.svg'
+        img404
       }
     },
     methods: {
@@ -50,7 +50,6 @@
   }
   .error-404 {
     img {
-      width: 140px;
       margin: 0 auto;
     }
     h3 {
