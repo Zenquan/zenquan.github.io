@@ -73,7 +73,8 @@ export default {
       }
     },
     '/api/zhihu': {
-      target: 'http://zhihu.joyenjoy.tech',
+      // target: 'http://zhihu.joyenjoy.tech',
+      target: 'http://localhost:5000',
       pathRewrite: {
         '^/api/zhihu' : '/'
       }

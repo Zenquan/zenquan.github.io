@@ -15,6 +15,6 @@ export default function ({ $axios, redirect }) {
     console.log(code)
     if(code != 200){
       console.log(code)
-     }
+    }
   })
 }

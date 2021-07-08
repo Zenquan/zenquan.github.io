@@ -1,8 +1,8 @@
 <template>
   <div class="login">
     <header class="login-header">
-      <h3>登录知乎</h3>
-      <p>发现更多可信赖的解答</p>
+      <h3>登录玩呢</h3>
+      <p>留下精彩的段子</p>
     </header>
     <div class="login-form">
       <van-cell-group>
@@ -49,6 +49,7 @@ export default {
     },
     async onSubmit () {
       if (this.name && this.password) {
+        await getUsers()
         const result = await login({
           name: this.name,
           password: this.password
