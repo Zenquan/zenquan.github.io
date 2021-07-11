@@ -8,7 +8,7 @@
 - [ ] 小应用“玩呢”
   - [x]  画原型图、设计稿
   - [x]  设计基本架构和数据库
-      ![](https://cdn.jsdelivr.net/gh/zenquan/diagrams@master/img/玩呢.png)
+      ![](https://cdn.jsdelivr.net/gh/zenquan/diagrams@master/img/玩呢架构图.png)
   - [ ]  写后端接口
   - [ ]  切图写前端
 ## Build Setup
