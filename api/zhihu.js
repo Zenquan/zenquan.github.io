@@ -9,7 +9,6 @@ export const getUsers = (params) =>
   })
 
   export const login= (params) => {
-    console.log('>>>', params);
     return request({
       url: '/api/zhihu/users/login',
       method: 'post',

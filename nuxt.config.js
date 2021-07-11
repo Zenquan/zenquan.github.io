@@ -31,6 +31,7 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '~/assets/css/index.less',
+    'swiper/swiper-bundle.min.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -39,6 +40,7 @@ export default {
     '~/plugins/vant.js',
     '~/plugins/octokit.js',
     '~/plugins/global.js',
+    {src: '~/plugins/swiper.js', ssr: false}
   ],
 
   loader:[

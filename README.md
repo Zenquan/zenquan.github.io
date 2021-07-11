@@ -6,7 +6,7 @@
 - [ ] 分类相册
 - [ ] 权限相册
 - [ ] 小应用“玩呢”
-  - [ ]  画原型图、设计稿
+  - [x]  画原型图、设计稿
   - [x]  设计基本架构和数据库
       ![](https://cdn.jsdelivr.net/gh/zenquan/diagrams@master/img/玩呢.png)
   - [ ]  写后端接口

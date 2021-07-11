@@ -50,7 +50,7 @@ export default {
           return `${baseUrl}/${d.name}`
         })
       }
-      console.log('list>>>', this.list);
+      // console.log('list>>>', this.list);
     },
   },
   computed: {

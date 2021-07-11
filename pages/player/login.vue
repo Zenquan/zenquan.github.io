@@ -30,7 +30,8 @@
   </div>
 </template>
 <script>
-import { login, getUsers } from '~/api/zhihu';
+import { Toast } from 'vant';
+import { login } from '~/api/zhihu';
 export default {
   data () {
     return {
@@ -49,13 +50,15 @@ export default {
     },
     async onSubmit () {
       if (this.name && this.password) {
-        await getUsers()
         const result = await login({
           name: this.name,
           password: this.password
         })
 
-        console.log('result>>>', result);
+        const {msg, data: {token}} = result
+        await localStorage.setItem('token', token)
+        await Toast(msg)
+        await this.$router.push('/player')
       }
     },
     loginOrRegister () {

@@ -17,8 +17,10 @@
     "lodash": "^4.17.21",
     "nuxt": "^2.14.12",
     "postcss-pxtorem": "^5.1.1",
+    "swiper": "^6.7.5",
     "v-viewer": "^1.6.3",
     "vant": "^2.12.4",
+    "vue-awesome-swiper": "^4.1.1",
     "vue-gallery-slideshow": "^1.5.2"
   },
   "devDependencies": {
