@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@nuxtjs/proxy": "^2.1.0",
+    "@nuxtjs/style-resources": "^1.2.0",
     "@nuxtjs/tailwindcss": "^3.4.2",
     "@tailwindcss/postcss7-compat": "^2.0.3",
     "@vue/test-utils": "^1.1.2",

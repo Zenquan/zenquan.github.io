@@ -14,7 +14,8 @@ import {
   ImagePreview,
   Tab,
   Tabs,
-  Loading
+  Loading,
+  Icon
 } from 'vant';
 
 Vue.use(Button);
@@ -32,3 +33,4 @@ Vue.use(ImagePreview);
 Vue.use(Tab);
 Vue.use(Tabs);
 Vue.use(Loading);
+Vue.use(Icon);

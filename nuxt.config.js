@@ -61,8 +61,13 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/proxy'
+    '@nuxtjs/proxy',
+    '@nuxtjs/style-resources'
   ],
+
+  styleResources: {
+    less: '~/assets/css/vars.less'
+  },
 
   axios: {
     proxy: true
@@ -76,7 +81,8 @@ export default {
     },
     '/api/zhihu': {
       // target: 'http://zhihu.joyenjoy.tech',
-      target: 'http://localhost:5000',
+      // target: 'http://localhost:5000',
+      target: 'http://localhost:3002',
       pathRewrite: {
         '^/api/zhihu' : '/'
       }

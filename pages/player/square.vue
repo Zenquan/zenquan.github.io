@@ -1,29 +1,26 @@
 <template>
-  <div>
-    square
-  </div>
+  <CardSwiperSlide :followingJokes="followingJokes"/>
 </template>
 <script>
+import CardSwiperSlide from './components/CardSwiperSlide'
 export default {
-  data () {
+  data() {
     return {
-    }
+    };
   },
   props: {
+    followingJokes: {
+      type: Array,
+      default: []
+    }
   },
-  methods: {
-  },
-  computed: {
-  },
+  beforeMount() {},
+  methods: {},
   components: {
-  },
-  created() {
-  },
-  mounted() {
-  },
-  destroyed() {
+    CardSwiperSlide
   }
 };
 </script>
-<style lang="scss" scoped>
+<style lang="less" scoped>
+
 </style>

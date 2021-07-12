@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <Home v-if="!active"></Home>
+    <Home v-if="!active" :followingJokes="followingJokes"></Home>
     <!-- 广场 -->
-    <Square v-else-if="active===1"></Square>
+    <Square v-else-if="active===1" :followingJokes="followingJokes"></Square>
     <!-- 素材 -->
     <Material v-else-if="active===2"></Material>
     <!-- 用户中心 -->
-    <User v-else></User>
+    <User v-else :userInfo="userInfo"></User>
     <!-- 底部导航栏 -->
     <footer>
       <van-tabbar v-model="active"
@@ -17,7 +17,6 @@
         <van-tabbar-item icon="fire-o">广场</van-tabbar-item>
         <van-tabbar-item icon="gem-o">素材</van-tabbar-item>
         <van-tabbar-item
-          @click="goUserCenter"
           icon="user-o"
           badge="3"
           >我的
@@ -32,21 +31,35 @@ import Home from './home';
 import Square from './square';
 import Material from './material';
 import User from './user';
+import { getUser, followingJokesList } from '~/api/zhihu';
 export default {
   layout: "default",
   data() {
     return {
       // 底部导航栏
-      active: 0
+      active: 0,
+      userInfo: {},
+      followingJokes: []
     };
   },
   methods: {
-    onLoad() {
+    async getUser () {
+      const result = await getUser({
+        _id: localStorage.getItem('_id')
+      })
+      this.userInfo = result.data
     },
-    goUserCenter () {
+    async followingJokesList () {
+      const result = await followingJokesList()
+      this.followingJokes = result.data
+    },
+    async fetch () {
+      await this.followingJokesList()
+      await this.getUser()
     }
   },
   mounted() {
+    this.fetch()
   },
   head: {
     title: '玩呢~一起玩',

@@ -1,42 +1,24 @@
 <template>
-  <div v-swiper="swiperOption">
-    <div class="swiper-wrapper">
-      <div v-for="(item, index) in dataImage" :key="index" class="swiper-slide">
-        <img :src="item.imgUrl" />
-      </div>
-    </div>
-  </div>
+  <CardSwiperSlide :followingJokes="followingJokes"/>
 </template>
 <script>
+import CardSwiperSlide from './components/CardSwiperSlide'
 export default {
   data() {
     return {
-      dataImage: [
-        {
-          imgUrl: require("~/assets/img/avatar.jpeg")
-        },
-        {
-          imgUrl: require("~/assets/img/avatar.jpeg")
-        },
-        {
-          imgUrl: require("~/assets/img/avatar.jpeg")
-        }
-      ],
-      swiperOption: { // 配置说明直接看官网
-        lazy: {
-          loadPrevNext: true
-        },
-        direction: 'vertical',
-        spaceBetween: 30,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true
-        }
-      }
     };
   },
+  props: {
+    followingJokes: {
+      type: Array,
+      default: []
+    }
+  },
   beforeMount() {},
-  methods: {}
+  methods: {},
+  components: {
+    CardSwiperSlide
+  }
 };
 </script>
 <style lang="less" scoped>

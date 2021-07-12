@@ -55,8 +55,9 @@ export default {
           password: this.password
         })
 
-        const {msg, data: {token}} = result
+        const {msg, data: {token, _id}} = result
         await localStorage.setItem('token', token)
+        await localStorage.setItem('_id', _id)
         await Toast(msg)
         await this.$router.push('/player')
       }
@@ -85,12 +86,6 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-@info-bgcolor: #06f;
-@primary-color: #fff;
-@primary-font-size: 16px;
-@big-font-size: 25px;
-@small-font-size: 12px;
-
 .login {
   .login-header {
     display: flex;
