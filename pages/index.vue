@@ -14,8 +14,8 @@
         <fancy-btn href="/projects" title="项目"/>
         <fancy-btn href="/album" title="相册"/>
         <fancy-btn href="https://github.com/Zenquan/EasyLink" title="导航"/>
-        <fancy-btn href="https://blog.joyenjoy.tech/about/" title="关于"/>
-        <fancy-btn href="https://zenquan.vercel.app/player/" title="玩呢"/>
+        <fancy-btn href="//blog.joyenjoy.tech/about/" title="关于"/>
+        <fancy-btn href="//joyenjoy.tech/player/" title="玩呢"/>
       </div>
     </div>
   </pbg>
