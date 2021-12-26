@@ -1,7 +1,7 @@
 # zenquan的空间站
 
 
-## TODO
+<!-- ## TODO
 
 - [ ] 分类相册
 - [ ] 权限相册
@@ -10,7 +10,7 @@
   - [x]  设计基本架构和数据库
       ![](https://cdn.jsdelivr.net/gh/zenquan/diagrams@master/img/玩呢架构图1.png)
   - [ ]  写后端接口
-  - [ ]  切图写前端
+  - [ ]  切图写前端 -->
 ## Build Setup
 
 ```bash
