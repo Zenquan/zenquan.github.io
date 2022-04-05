@@ -9,13 +9,11 @@
     <div class="content f-all-center">
       <img :src="avatar" alt="" class="avatar">
       <div class="link-blog-wrap">
-        <fancy-btn href="//blog.joyenjoy.tech/" title="随笔"/>
+        <fancy-btn href="//blog.joyenjoy.tech/" title="技术博客"/>
         <fancy-btn href="https://www.cnblogs.com/Jomsou/" title="博客园"/>
         <fancy-btn href="/projects" title="项目"/>
         <fancy-btn href="/album" title="相册"/>
         <fancy-btn href="https://github.com/Zenquan/EasyLink" title="导航"/>
-        <fancy-btn href="//blog.joyenjoy.tech/about/" title="关于"/>
-        <fancy-btn href="//joyenjoy.tech/player/" title="玩呢"/>
       </div>
     </div>
   </pbg>
